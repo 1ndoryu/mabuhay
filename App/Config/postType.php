@@ -2,18 +2,17 @@
 
 use Glory\Core\PostTypeManager;
 
-/*
-
 PostTypeManager::define(
-    'example',
+    'destino',
     [
         'has_archive' => true,
-        'rewrite'     => ['slug' => 'examples'],
-        'menu_icon'   => 'dashicons-media-audio',
+        'rewrite'     => ['slug' => 'destinos'],
+        'menu_icon'   => 'dashicons-location',
         'supports'    => ['title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'],
     ],
-    'Example',
-    'Examples'
+    'Destino',
+    'Destinos'
 );
 
-*/
+// Registra todos los CPTs definidos anteriormente.
+PostTypeManager::register();

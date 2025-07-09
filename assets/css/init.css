@@ -5,8 +5,13 @@
 	--bordeBoton: 1px #1f1f1f8c solid;
 	--padding: 20px;
 	--ancho: 600px;
-    --blanco: #efefef;
+    --blanco: #F5F1E7;
     --negro: #070707;
+    --font: "Source Sans 3", Arial, Helvetica, sans-serif !important;
+    --font-serif: "Source Serif 4", Arial, Helvetica, sans-serif !important;
+    --primero: #1A7B8B;
+    --segundo: #2A4A3C;
+    --tercero: #EBE2D3;
 }
 
 body, body p, textarea {
@@ -20,7 +25,7 @@ body, body p, textarea {
     unicode-bidi: isolate;
     color: var(--negro);
     line-height: 1.8;
-    font-family: "Source Sans 3", Arial, Helvetica, sans-serif !important;
+    font-family: var(--font);
     letter-spacing: 0px;
     font-weight: 400px !important;
     font-style: normal;
