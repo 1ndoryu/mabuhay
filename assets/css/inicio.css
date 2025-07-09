@@ -1,0 +1,28 @@
+.logoSitio svg {
+    height: 25px;
+    color: var(--blanco);
+    fill: var(--blanco);
+}
+
+.header a {
+    font-size: 15px;
+    padding: 0px 10px;
+    color: var(--blanco);
+}
+
+header.header {
+    position: absolute;
+    z-index: 1001;
+}
+
+img#hero-img {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.5);
+    margin-left: auto;
+    margin-right: auto;
+}

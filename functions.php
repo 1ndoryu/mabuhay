@@ -55,9 +55,7 @@ foreach ($directorios as $directorio) {
 
 function fuentes()
 {
-    $theme_url = get_template_directory_uri();
-    echo '<link rel="preload" href="' . $theme_url . '/assets/fonts/SourceSans3-Regular.woff2" as="font" type="font/woff2" crossorigin>';
-    echo '<link rel="preload" href="' . $theme_url . '/assets/fonts/SourceSans3-Bold.woff2" as="font" type="font/woff2" crossorigin>';
+
 }
 add_action('wp_head', 'fuentes', 1);
 
