@@ -1,20 +1,29 @@
 :root {
-	--fondo: #070707; /*Post*/
-	--borde: 1px #161616 solid; 
-	--radius: 5px;
-	--bordeBoton: 1px #1f1f1f8c solid;
-	--padding: 20px;
-	--ancho: 600px;
-    --blanco: #F5F1E7;
+    --fondo: #070707; /*Post*/
+    --borde: 1px #161616 solid;
+    --radius: 5px;
+    --bordeBoton: 1px #1f1f1f8c solid;
+    --padding: 20px;
+    --ancho: 600px;
+    --blanco: #f5f1e7;
     --negro: #070707;
-    --font: "Source Sans 3", Arial, Helvetica, sans-serif !important;
-    --font-serif: "Source Serif 4", Arial, Helvetica, sans-serif !important;
-    --primero: #1A7B8B;
-    --segundo: #2A4A3C;
-    --tercero: #EBE2D3;
+    --font: 'Source Sans 3', Arial, Helvetica, sans-serif !important;
+    --font-serif: 'Source Serif 4', Arial, Helvetica, sans-serif !important;
+    --primero: #1a7b8b;
+    --segundo: #2a4a3c;
+    --tercero: #ebe2d3;
 }
 
-body, body p, textarea {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+body,
+body p,
+textarea {
     font-size: 14px;
     /* line-height: 12px; */
     display: block;
@@ -41,31 +50,31 @@ html {
 }
 
 .firefox * {
-	scrollbar-width: thin;
-	scrollbar-color: #373737 transparent;
+    scrollbar-width: thin;
+    scrollbar-color: #373737 transparent;
 }
 
 * {
-	-webkit-tap-highlight-color: transparent; 
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .bloque {
-	display: flex;
-	background: var(--fondo);
-	border-radius: var(--radius);
-	padding: var(--padding);
-	border: var(--borde);
-	width: var(--ancho);
-	max-width: 100%;
-	gap: 10px;
+    display: flex;
+    background: var(--fondo);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    border: var(--borde);
+    width: var(--ancho);
+    max-width: 100%;
+    gap: 10px;
 }
 
 img {
-	border-style: none;
-	vertical-align: top;
-	max-width: 100%;
-	height: auto;
+    border-style: none;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
 }
 
 .flex {
@@ -117,10 +126,9 @@ body.noScroll {
     align-items: center;
 }
 
-
 .columna {
     flex-direction: column;
-}	
+}
 
 .w100 {
     width: 100%;
@@ -130,130 +138,122 @@ body.noScroll {
     width: 50%;
 }
 
-
-
 .firefox *::-webkit-scrollbar {
-	width: 4px; 
-	background: transparent;
+    width: 4px;
+    background: transparent;
 }
 
 .firefox *::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	border: 2px solid transparent; 
-	background-clip: padding-box; 
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
 }
 
 .firefox .menu-container {
-	filter: url(#blur-effect) !important;
-	background-color: rgba(9, 9, 9, 0.85);
+    filter: url(#blur-effect) !important;
+    background-color: rgba(9, 9, 9, 0.85);
 }
 
 .firefox .panelperfilsupsec {
-	background: #070707;
-	background-color: rgb(7, 7, 7);
-	filter: url(#blur-effect) !important;
-	background-color: rgba(9, 9, 9, 0.85);
+    background: #070707;
+    background-color: rgb(7, 7, 7);
+    filter: url(#blur-effect) !important;
+    background-color: rgba(9, 9, 9, 0.85);
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 4px;
-	transition: width 0.3s ease, height 0.3s ease;
+    width: 4px;
+    height: 4px;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 ::-webkit-scrollbar-track {
-	background: none;
+    background: none;
 }
 ::-webkit-scrollbar-thumb {
-	background: #555;
-	border-radius: 10px;
+    background: #555;
+    border-radius: 10px;
 }
 
 .scroll-visible::-webkit-scrollbar {
-	width: 4px;
-	height: 4px;
+    width: 4px;
+    height: 4px;
 }
 .scroll-visible::-webkit-scrollbar-thumb {
-	background: unset;
+    background: unset;
 }
 .scroll-visible::-webkit-scrollbar-thumb:hover {
-	background: #888;
+    background: #888;
 }
-
 
 .appAndroid p {
-	font-size: 14px;
+    font-size: 14px;
 }
-
 
 .appAndroid button {
-	font-size: 14px !important;
+    font-size: 14px !important;
 }
 
-
 .appAndroid a {
-	font-size: 14px;
+    font-size: 14px;
 }
 
 .appAndroid .JHVSFW a {
-	font-size: 15px !important;
+    font-size: 15px !important;
 }
 
 .appAndroid .ZVJVZA {
-	padding-bottom: 0px;
-	line-height: 13px;
-	padding-top: 5px;
+    padding-bottom: 0px;
+    line-height: 13px;
+    padding-top: 5px;
 }
 
 .appAndroid .HQLXWD a {
-	font-size: 12px;
+    font-size: 12px;
 }
 @media (max-width: 640px) {
-	::-webkit-scrollbar {
-		width: 0px;
-		height: 0px;
-		transition: width 0.3s ease, height 0.3s ease;
-	}
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
 
-	.scroll-visible::-webkit-scrollbar {
-		width: 0px;
-		height: 0px;
-	}
+    .scroll-visible::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
 }
 
-.appAndroid .infoIA-btn, .appAndroid span.postTag, .appAndroid .badge, .appAndroid .postTagToggle {
-	font-size: 13px !important;
-
+.appAndroid .infoIA-btn,
+.appAndroid span.postTag,
+.appAndroid .badge,
+.appAndroid .postTagToggle {
+    font-size: 13px !important;
 }
 
 ul {
-	list-style: none;
+    list-style: none;
 }
-
-
-
 
 .borde {
-	border: var(--borde);
+    border: var(--borde);
 }
 
-
 textarea {
-	color: #fff;
-	border: none;
-	padding: 0px;
-	margin-bottom: 10px;
-	font-size: 12px;
-	background: none;
-	resize: none;
-	width: 100%;
+    color: #fff;
+    border: none;
+    padding: 0px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    background: none;
+    resize: none;
+    width: 100%;
 }
 
 .seleccionado {
-	filter: brightness(2);
-	opacity: 1 !important;
-	border: 1px solid #676767;
+    filter: brightness(2);
+    opacity: 1 !important;
+    border: 1px solid #676767;
 }
-
 
 .botonesBloques button {
     width: -webkit-fill-available;
@@ -275,105 +275,96 @@ button {
 }
 
 .botonprincipal {
-	background: white !important;
-	color: black !important;
-	border: 1px #00000000 solid !important;
+    background: white !important;
+    color: black !important;
+    border: 1px #00000000 solid !important;
 }
 
-
 .preview {
-	border: var(--borde);
-	border-radius: var(--radius);
-	display: flex;
-	align-content: center;
-	text-align: center;
-	padding: var(--padding);
-	min-height: 60px;
-	cursor: pointer;
-	width: 100%;
+    border: var(--borde);
+    border-radius: var(--radius);
+    display: flex;
+    align-content: center;
+    text-align: center;
+    padding: var(--padding);
+    min-height: 60px;
+    cursor: pointer;
+    width: 100%;
     place-content: center;
 }
 
-
 .noborde {
-	border: unset;
+    border: unset;
 }
 
-body {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-}
 
 label {
     font-size: 12px;
     color: #a2a2a2;
 }
 
-
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
-
 form {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .heart-animation {
-	animation: fade 2s ease forwards;
-	color: red;
-	font-size: 30px;
+    animation: fade 2s ease forwards;
+    color: red;
+    font-size: 30px;
 }
 
-
 .waveform-container {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .modal {
     display: none;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: var(--fondo);
-	border: var(--borde);
-	padding: 20px;
-	border-radius: var(--radius);
-	width: 400px;
-	max-width: 90%;
-	z-index: 1006;
-	font-size: 11px;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	gap: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--fondo);
+    border: var(--borde);
+    padding: 20px;
+    border-radius: var(--radius);
+    width: 400px;
+    max-width: 90%;
+    z-index: 1006;
+    font-size: 11px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
     max-height: 82%;
     overflow: auto;
 }
 
 .customCheckbox {
-	display: flex;
-	cursor: pointer;
-	padding: 5px;
-	user-select: none;
-	color: #6b6b6b;
-	border: var(--borde);
-	border-radius: 5px;
-	width: 100%;
-	justify-content: center;
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+    user-select: none;
+    color: #6b6b6b;
+    border: var(--borde);
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
 }
 
-.customCheckbox input[type="checkbox"] {
-	display: none !important;
+.customCheckbox input[type='checkbox'] {
+    display: none !important;
 }
 
-input, textarea {
+input,
+textarea {
     background: unset !important;
     padding: 7px 0px !important;
     border-bottom: var(--borde) !important;
@@ -387,7 +378,8 @@ input, textarea {
     margin: 4px 0;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
 }
 
@@ -451,7 +443,7 @@ input:focus, textarea:focus {
 }
 
 .previewsForms.activo {
-  display: flex; /* o flex, grid, etc., según necesites */
+    display: flex; /* o flex, grid, etc., según necesites */
 }
 
 /* Evita el scroll en el body cuando un menú está abierto */

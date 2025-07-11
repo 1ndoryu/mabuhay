@@ -1,0 +1,34 @@
+.destinoGaleriaContenedor.destino div {
+    width: 300px;
+}
+
+.destinoGaleriaContenedor.destino img {
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(0.65);
+}
+
+.destinoGaleriaContenedor.destino {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.destinoGaleriaContenedor.destino .imagen {
+    position: relative;
+}
+
+.destino .titulo {
+    font-size: 20px;
+    position: absolute;
+    text-align-last: center;
+    align-self: anchor-center;
+    color: var(--blanco);
+    font-family: var(--font-serif);
+}
+

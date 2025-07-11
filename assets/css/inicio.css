@@ -13,6 +13,9 @@
 header.header {
     position: absolute;
     z-index: 1001;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .hero {
@@ -33,7 +36,7 @@ header.header {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.35);
     pointer-events: none;
     z-index: 0;
 }
@@ -59,6 +62,8 @@ header.header {
     align-items: center;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .container {
@@ -84,4 +89,86 @@ h3 {
 svg#uuid-0fed6675-7d19-4294-ae6f-2dffd2e706a2 {
     height: 50px;
     margin-bottom: -20px;
+}
+
+.glory-content-list.destino {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: max-content;
+}
+
+.destinos img {
+    width: 220px;
+    height: 320px;
+    min-width: 220px;
+    object-fit: cover;
+}
+
+.container.destinos {
+    max-width: unset;
+    overflow: hidden;
+}
+
+/* Ajustes para cada tarjeta de destino */
+.card-style {
+    position: relative;
+}
+
+.card-style .card-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--blanco);
+    padding: 8px 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.card-style:hover .card-title-overlay {
+    opacity: 1;
+}
+
+button.borde.verDestinos {
+    color: unset;
+    font-size: 14px;
+    width: fit-content;
+    margin: auto;
+    padding: 6px 13px;
+}
+
+/* Contenedor hero con video cargado: quitamos la imagen de fondo */
+.hero.video-loaded {
+    background-image: none !important;
+}
+
+/* Ajuste para que el video cubra toda la pantalla sin barras negras */
+.hero iframe.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 16/9 ratio => ancho para cubrir alto si la pantalla es alta */
+    width: 177.78vh;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 56.25vw; /* 9/16 * 100 */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero.secundario {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.hero.secundario h1 {
+    color: white;
 }

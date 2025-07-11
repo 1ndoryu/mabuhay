@@ -5,10 +5,11 @@ use Glory\Core\PageManager;
 
 AssetManager::setGlobalDevMode(true);
 AssetManager::setThemeVersion('0.1.1');
-AssetManager::defineFolder('script', '/js/');
+AssetManager::defineFolder('script', '/assets/js/');
 AssetManager::defineFolder('style', '/assets/css/');
 
 PageManager::define('home');
+PageManager::define('destinos');
 
 # CreditosManager::init();
 # CreditosManager::recargaPeriodica(true, 10, 1);
