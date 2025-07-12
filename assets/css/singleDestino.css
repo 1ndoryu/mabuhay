@@ -1,0 +1,16 @@
+.container.singleDestino {
+    width: 100%;
+    min-width: 100%;
+    padding: 30px;
+    text-align: start;
+}
+
+.singleDestino p {
+    font-size: 18px;
+    font-family: var(--font-serif);
+    max-width: 1000px;
+}
+
+.singleDestino button.borde.principal {
+    margin: unset;
+}

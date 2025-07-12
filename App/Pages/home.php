@@ -22,7 +22,7 @@ function home()
             <h3>
                 En Mabuhay, somos artesanos de experiencias. Diseñamos viajes que no solo cambian su perspectiva, sino que también dejan un legado positivo en las culturas, las comunidades y el patrimonio que visitamos. Creamos un espacio de serenidad y confort para que reconecte con usted mismo y con sus seres querido
             </h3>
-            <button class="borde verDestinos">
+            <button class="borde principal">
                 <a href="/destinos">
                     Ver todos los destinos
                 </a>

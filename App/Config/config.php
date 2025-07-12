@@ -10,6 +10,7 @@ AssetManager::defineFolder('style', '/assets/css/');
 
 PageManager::define('home');
 PageManager::define('destinos');
+PageManager::define('nosotros');
 
 # CreditosManager::init();
 # CreditosManager::recargaPeriodica(true, 10, 1);

@@ -8,7 +8,7 @@ DefaultContentManager::define(
         [
             'slugDefault' => 'Japon',
             'titulo' => 'Japon',
-            'contenido' => 'Japon',
+            'contenido' => 'Japón es un viaje a la armonía entre tradición y modernidad. Desde los santuarios silenciosos de Kioto hasta el dinamismo luminoso de Tokio, cada rincón ofrece una lección de belleza, respeto y detalle. Es un país donde el arte de vivir se expresa en cada gesto, cada jardín, cada plato servido con ceremonia.',
             'imagenDestacadaAsset' => 'japon.jpg'
         ],
         [
