@@ -9,7 +9,7 @@ AssetManager::defineFolder('script', '/assets/js/');
 AssetManager::defineFolder('style', '/assets/css/');
 
 PageManager::define('home');
-PageManager::define('destinos');
+PageManager::define('test');
 PageManager::define('nosotros');
 
 # CreditosManager::init();

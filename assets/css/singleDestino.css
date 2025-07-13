@@ -14,3 +14,74 @@
 .singleDestino button.borde.principal {
     margin: unset;
 }
+
+.grid-galeria img {
+    height: 500px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+.grid-galeria {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+/* Wrapper para posicionar flechas */
+.galeria-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria-prev,
+.galeria-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.galeria-prev {
+    left: 10px;
+}
+
+.galeria-next {
+    right: 10px;
+}
+
+/* Imágenes clicables */
+.item-galeria {
+    cursor: pointer;
+}
+
+/* Overlay para la imagen ampliada */
+.galeria-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+}
+
+.galeria-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.galeria-overlay.oculto {
+    display: none;
+}
+
+.container.singleDestino.galeria h2 {
+    color: var(--blanco);
+}

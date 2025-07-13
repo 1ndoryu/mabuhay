@@ -21,6 +21,28 @@ function pageSingleDestino(\WP_Post $post)
 
     <div class="container singleDestino galeria" style="background-color: var(--segundo);">
         <h2>Galeria</h2>
+        <div class="galeria-wrapper">
+            <button class="galeria-prev" aria-label="Anterior">&#10094;</button>
+            <div class="grid-galeria">
+                <?php
+                $idsGaleria = get_post_meta($post->ID, '_glory_default_galeria_ids', true);
+                if (is_array($idsGaleria)) {
+                    foreach ($idsGaleria as $idAdjunto) {
+                        $urlImg = wp_get_attachment_image_url($idAdjunto, 'large');
+                        if ($urlImg) {
+                            echo '<img src="' . esc_url($urlImg) . '" alt="Galería" class="item-galeria">';
+                        }
+                    }
+                }
+                ?>
+            </div>
+            <button class="galeria-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Overlay para imagen ampliada -->
+    <div class="galeria-overlay oculto">
+        <img src="" alt="Imagen ampliada" />
     </div>
 
 

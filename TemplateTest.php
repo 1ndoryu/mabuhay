@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Destinos
+Template Name: Test
 */
 
 get_header();

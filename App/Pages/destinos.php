@@ -11,7 +11,7 @@ function pageDestinos()
         <h2>Destinos</h2>
     </div>
 
-
+    
     <?php ContentRender::print('destino', [
         'publicacionesPorPagina' => 50,
         'plantillaCallback'      => 'destinoGaleria',
