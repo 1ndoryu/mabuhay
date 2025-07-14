@@ -36,6 +36,22 @@ function home()
             ]); ?>
         </div>
     </div>
+
+    <!-- aqui va una seccion de llamado a la acción -->
+
+    <div class="section categorias" style="background-color: var(--primero); padding-top: 100px;">
+        <div class="container categorias">
+            <?php \Glory\Components\TermRender::print('category', [
+                'numero'            => 12,
+                'plantillaCallback' => 'categoriaItem',
+                'ordenRandom'       => true,
+                'argumentosConsulta' => [
+                    'exclude'    => [get_option('default_category')],
+                    'hide_empty' => false,
+                ],
+            ]); ?>
+        </div>
+    </div>
 <?php
     return ob_get_clean();
 }

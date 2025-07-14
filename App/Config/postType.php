@@ -9,6 +9,7 @@ PostTypeManager::define(
         'rewrite'     => ['slug' => 'destinos'],
         'menu_icon'   => 'dashicons-location',
         'supports'    => ['title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'],
+        'taxonomies'  => ['category'],
     ],
     'Destino',
     'Destinos'

@@ -59,3 +59,49 @@ function fuentes()
 }
 add_action('wp_head', 'fuentes', 1);
 
+// Asegurar que los archivos de categoría solo muestren destinos.
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() && $query->is_main_query() && $query->is_category()) {
+        $query->set('post_type', ['destino']);
+    }
+});
+
+// --- Sincronización de contenido por defecto también en frontend ---
+add_action('init', function () {
+    if (is_admin()) {
+        return; // El sincronizador ya corre en admin
+    }
+
+    $needsSync = false;
+
+    // Detectar si existen categorías distintas a la default
+    $defaultCat = (int) get_option('default_category');
+    $termsCheck  = get_terms([
+        'taxonomy'   => 'category',
+        'hide_empty' => false,
+        'exclude'    => [$defaultCat],
+        'number'     => 1,
+        'fields'     => 'ids',
+    ]);
+
+    if (empty($termsCheck)) {
+        \Glory\Core\GloryLogger::info('Frontend: No hay categorías personalizadas, se forzará sincronización.');
+        $needsSync = true;
+    }
+
+    if ($needsSync || false === get_transient('glory_default_content_synced_front')) {
+        // Ejecutar sincronización manual
+        if (class_exists('\\Glory\\Services\\DefaultContentSynchronizer')) {
+            \Glory\Core\GloryLogger::info('Frontend: Ejecutando sincronización de contenido por defecto');
+            $sync = new \Glory\Services\DefaultContentSynchronizer();
+            $sync->sincronizar();
+        } else {
+            \Glory\Core\GloryLogger::error('Frontend: DefaultContentSynchronizer no encontrado');
+        }
+        // Guardamos transient por 24h para evitar sobrecarga
+        if (!$needsSync) {
+            set_transient('glory_default_content_synced_front', 1, DAY_IN_SECONDS);
+        }
+    }
+}, 11);
+

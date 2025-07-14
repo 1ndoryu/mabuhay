@@ -41,9 +41,10 @@ IGNORAR_ARCHIVOS = [
     "README.md",
     "Dockerfile",
     "docker-compose.yml",
+    "icons.php",
 ]
 # 4. Lista de extensiones de archivo que quieres ignorar.
-IGNORAR_EXTENSIONES = [".log", ".lock", ".bak", ".tmp", ".dll", ".exe", ".jpg", ".png", ".gif", ".ico", ".css", "webp", "mp3", "wav"]
+IGNORAR_EXTENSIONES = [".log", ".lock", ".bak", ".tmp", ".dll", ".exe", ".jpg", ".png", ".gif", ".ico", ".css", "webp", "mp3", "wav", ".otf", ".ttf", ".woff", ".woff2", ".mp4"]
 
 # --- FIN DE LA CONFIGURACIÓN ---
 
