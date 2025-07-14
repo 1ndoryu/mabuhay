@@ -7,7 +7,7 @@ function carrusel() {
     lista.style.animation = 'none';
 
     // Velocidad (px/s)
-    const velocidad = 40;
+    const velocidad = 20;
 
     // Leemos gap desde CSS
     const gap = parseInt(getComputedStyle(lista).gap || 0, 10);

@@ -2,6 +2,7 @@
 
 use Glory\Utility\AssetsUtility;
 use Glory\Components\ContentRender;
+use Glory\Components\TermRender;
 
 function home()
 {
@@ -38,10 +39,32 @@ function home()
     </div>
 
     <!-- aqui va una seccion de llamado a la acción -->
+    <div class="section" style="position: relative;">
+        <div style="
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            ">
+            <img src="<?php AssetsUtility::imagenUrl('inicio1', 'jpg'); ?>" alt="Fondo" style="width:100%;height:100%;object-fit:cover;filter:brightness(60%);display:block;">
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 style="color: var(--blanco);">
+                Descubra el mundo con una nueva mirada. Atrévase a vivir experiencias que transforman, conectan y dejan huella. <br>
+            </h2>
+            <h3 style="color: var(--blanco);">Su próxima aventura comienza aquí. ¿Está listo para sentir, explorar y crear recuerdos inolvidables?</h3>
+            <button class="borde principal" style="border-color: var(--blanco); color: var(--blanco);">
+                <a href="/destinos">
+                    Planificar mi viaje
+                </a>
+            </button>
+        </div>
+    </div>
 
-    <div class="section categorias" style="background-color: var(--primero); padding-top: 100px;">
+    <div class="section categorias" style="background-color: var(--segundo);">
+
         <div class="container categorias">
-            <?php \Glory\Components\TermRender::print('category', [
+            <h2>¿Qué tipo de viaje estás buscando?</h2>
+            <?php TermRender::print('category', [
                 'numero'            => 12,
                 'plantillaCallback' => 'categoriaItem',
                 'ordenRandom'       => true,

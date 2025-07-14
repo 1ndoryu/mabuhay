@@ -234,7 +234,7 @@ $destinos = [
     [
         'slugDefault' => 'Israel',
         'titulo' => 'Israel',
-        'contenido' => 'Israel es un destino único que fusiona siglos de historia sagrada con una vibrante vida contemporánea. Tierra de milenarias tradiciones, paisajes que van desde el Mar Muerto hasta el Mar Mediterráneo, y ciudades que combinan cultura, espiritualidad y modernidad. Viajar a Israel es sumergirse en un mosaico cultural y espiritual, donde cada paso cuenta una historia y cada experiencia despierta los sentidos.',
+        'contenido' => 'Israel es un destino único que fusiona siglos de historia sagrada con una vibrante vida contemporánea. Tierra de milenarias tradiciones, paisajes que van desde el Mar Muerto hasta el Mar Mediterráneo, y ciudades que combinan cultura, espiritualidad y modernidad. Viajar a Israel es sumergirse en un mosaico cultural y espiritual, donde cada paso cuenta una historia y cada experiencia despierta los sentidos .',
         'imagenDestacadaAsset' => 'Israel.jpg'
     ],
     [
@@ -301,6 +301,15 @@ $categoriaPorSlug = [
     'Jordania' => 'Cultura e Historia Milenaria',
     'Turquia' => 'Cultura e Historia Milenaria, Lunas de Miel y Escapadas Románticas',
     'Oman' => 'Cultura e Historia Milenaria, Aventura y Exploración',
+];
+
+$GLOBALS['glory_imagen_por_categoria'] = [
+    'Cultura e Historia Milenaria' => 'cultura.jpg',
+    'Lunas de Miel y Escapadas Románticas' => 'romantico.jpg',
+    'Viajes Espirituales y de Conexión' => 'espiritual.jpg',
+    'Paraísos Tropicales y Relax' => 'playa.jpg',
+    'Aventura y Exploración' => 'aventura.jpg',
+    'Naturaleza y Vida Salvaje' => 'naturaleza.jpg',
 ];
 
 // Agregar automáticamente la galería a cada destino

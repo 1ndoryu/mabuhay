@@ -172,3 +172,39 @@ button.borde.principal {
 .hero.secundario h1 {
     color: white;
 }
+
+.section.categorias {
+    min-height: unset;
+}
+
+.container.categorias {
+    max-width: unset;
+}
+
+.glory-term-list.category {
+    display: grid;
+    gap: 60px;
+    padding: 60px;
+    grid-template-columns: repeat(3, 1fr); /* Máximo 3 columnas */
+    padding-top: 20px;
+}
+
+.glory-term-list.category img {
+    width: 100%;
+    object-fit: cover;
+    min-height: 200px;
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 767px) {
+    .glory-term-list.category {
+        grid-template-columns: repeat(2, 1fr); /* En móvil, 2 columnas */
+    }
+}
+
+.container.categorias h2 {
+    text-align: start;
+    padding: 60px;
+    padding-bottom: 0px;
+    color: var(--blanco);
+}
