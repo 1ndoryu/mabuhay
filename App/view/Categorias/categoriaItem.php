@@ -19,7 +19,7 @@ function categoriaItem(\WP_Term $term, string $itemClass)
                 <div class="placeholder-image" style="background-color: #e0e0e0; width:100%; height: 100%;"></div>
             <?php endif; ?>
 
-            <div class="card-title-overlay">
+            <div class="titulo" style="color: var(--blanco);">
                 <?php echo esc_html($term->name); ?>
             </div>
         </div>

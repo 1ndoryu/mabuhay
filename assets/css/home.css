@@ -103,6 +103,7 @@ svg#uuid-0fed6675-7d19-4294-ae6f-2dffd2e706a2 {
     height: 320px;
     min-width: 220px;
     object-fit: cover;
+    filter: brightness(0.7);
 }
 
 .container.destinos {
@@ -183,7 +184,8 @@ button.borde.principal {
 
 .glory-term-list.category {
     display: grid;
-    gap: 60px;
+    gap: 50px;
+    row-gap: 40px;
     padding: 60px;
     grid-template-columns: repeat(3, 1fr); /* Máximo 3 columnas */
     padding-top: 20px;
@@ -207,4 +209,10 @@ button.borde.principal {
     padding: 60px;
     padding-bottom: 0px;
     color: var(--blanco);
+}
+
+.categorias .titulo {
+    text-align: start;
+    font-size: 16px;
+    margin-top: 12px;
 }

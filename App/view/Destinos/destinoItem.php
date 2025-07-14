@@ -9,7 +9,7 @@ function destinoItem(\WP_Post $post, string $itemClass)
                 <a href="<?php echo esc_url(get_permalink($post)); ?>">
                     <?php echo get_the_post_thumbnail($post, 'medium_large'); ?>
                 </a>
-                <div class="card-title-overlay">
+                <div class="titulo">
                     <?php echo esc_html(get_the_title($post)); ?>
                 </div>
             </div>
