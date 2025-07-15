@@ -15,7 +15,7 @@ function pageDestinos()
     <?php ContentRender::print('destino', [
         'publicacionesPorPagina' => 50,
         'plantillaCallback'      => 'destinoGaleria',
-        'orden'                  => 'random',
+        'orden'                  => 'fecha',
         'itemClass'              => 'destinoGaleria',
         'claseContenedor'        => 'destinoGaleriaContenedor'
     ]); ?>
