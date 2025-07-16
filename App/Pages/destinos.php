@@ -11,14 +11,17 @@ function pageDestinos()
         <h2>Destinos</h2>
     </div>
 
-    
-    <?php ContentRender::print('destino', [
-        'publicacionesPorPagina' => 50,
+    <?php
+    ContentRender::print('destino', [
+        'publicacionesPorPagina' => -1,              // Todos los destinos
         'plantillaCallback'      => 'destinoGaleria',
-        'orden'                  => 'fecha',
-        'itemClass'              => 'destinoGaleria',
-        'claseContenedor'        => 'destinoGaleriaContenedor'
-    ]); ?>
+        'metaKey'               => 'continente',    // Meta para ordenar y agrupar
+        'orden'                 => 'ASC',           // Alfabético ascendente
+        'grupoEncabezado'          => true,            // Mostrar encabezado de continente
+        'claseContenedor'       => 'destinoGaleriaContenedor',
+        'claseItem'             => 'destinoGaleria'
+    ]);
+    ?>
 
 <?php
     return ob_get_clean();

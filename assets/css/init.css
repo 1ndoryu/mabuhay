@@ -93,12 +93,28 @@ img {
     gap: 20px;
 }
 
+.gap10 {
+    gap: 10px;
+}
+
+.gap40 {
+    gap: 40px;
+}
+
+.pa5 {
+    padding: 5px;
+}
+
 .pa20 {
     padding: 20px;
 }
 
 .pa25 {
     padding: 25px;
+}
+
+.pa40 {
+    padding: 40px;
 }
 
 a {
@@ -136,6 +152,14 @@ body.noScroll {
 
 .w50 {
     width: 50%;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
 }
 
 .firefox *::-webkit-scrollbar {

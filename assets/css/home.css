@@ -15,8 +15,28 @@ header.header {
     z-index: 1001;
     width: 100%;
     display: flex;
-    justify-content: center;
 }
+
+a.logoSitio {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.headerNav {
+    position: relative;
+    width: 100%;
+}
+
+.header div, .header nav  {
+    width: 100%;
+}
+
+.botonHeader {
+    white-space: nowrap;
+}
+
 
 .hero {
     width: 100vw;
@@ -215,4 +235,35 @@ button.borde.principal {
     text-align: start;
     font-size: 16px;
     margin-top: 12px;
+}
+
+/* ===== Header fijo al hacer scroll ===== */
+header.header.fijado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--tercero);
+    z-index: 1001; /* Por encima del resto de elementos */
+}
+
+/* Colores del menú al estar fijado */
+header.header.fijado a {
+    color: var(--negro);
+}
+
+header.header.fijado .logoSitio svg {
+    color: var(--negro);
+    fill: var(--negro);
+}
+
+.footerLogo svg {
+    height: 25px;
+    color: var(--negro) !important;
+    fill: var(--negro) !important;
+}
+
+.footerContact svg {
+    height: 24px;
+    width: 24px;
 }

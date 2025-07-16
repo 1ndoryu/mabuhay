@@ -5,8 +5,8 @@ use Glory\Manager\DefaultContentManager;
 $destinos = [
     [
         'slugDefault' => 'Japon',
-        'titulo' => 'Japon',
-        'contenido' => 'Japon es un viaje a la armonía entre tradición y modernidad. Desde los santuarios silenciosos de Kioto hasta el dinamismo luminoso de Tokio, cada rincón ofrece una lección de belleza, respeto y detalle. Es un país donde el arte de vivir se expresa en cada gesto, cada jardín, cada plato servido con ceremonia.',
+        'titulo' => 'Japón',
+        'contenido' => 'Japón es un viaje a la armonía entre tradición y modernidad. Desde los santuarios silenciosos de Kioto hasta el dinamismo luminoso de Tokio, cada rincón ofrece una lección de belleza, respeto y detalle. Es un país donde el arte de vivir se expresa en cada gesto, cada jardín, cada plato servido con ceremonia.',
         'imagenDestacadaAsset' => 'japon.jpg'
     ],
     [
@@ -77,7 +77,7 @@ $destinos = [
     ],
     [
         'slugDefault' => 'Sudafrica',
-        'titulo' => 'Sudafrica',
+        'titulo' => 'Sudáfrica',
         'contenido' => 'Sudáfrica es un viaje a lo extraordinario. Desde los rugidos de leones en las llanuras del Kruger hasta los acantilados bañados por el Atlántico en Ciudad del Cabo, el país te invita a descubrirlo con todos los sentidos. Es un mosaico de culturas, paisajes y emociones. Aquí conviven selvas y sabanas, montañas y viñedos, océanos y desiertos. Cada paso es una aventura y cada rostro, una historia. Sudáfrica no se visita, se vive.',
         'imagenDestacadaAsset' => 'sudafrica.jpg'
     ],
@@ -101,7 +101,7 @@ $destinos = [
     ],
     [
         'slugDefault' => 'Etiopia',
-        'titulo' => 'Etiopia',
+        'titulo' => 'Etiopía',
         'contenido' => 'Etiopía no es solo un país, es un viaje a los orígenes del mundo. En sus paisajes volcánicos, montañas sagradas y ciudades talladas en roca late una historia que desafía el tiempo. Cuna de la humanidad, patria del café, tierra de reinos antiguos y religiones vivas, Etiopía es un lugar donde lo espiritual, lo natural y lo humano conviven en una armonía tan intensa como conmovedora. Un destino para los viajeros que buscan autenticidad, belleza cruda y una conexión profunda con la historia y la tierra.',
         'imagenDestacadaAsset' => 'etiopia.jpg'
     ],
@@ -131,19 +131,19 @@ $destinos = [
     ],
     [
         'slugDefault' => 'Canada',
-        'titulo' => 'Canada',
+        'titulo' => 'Canadá',
         'contenido' => 'Canadá es un país que se despliega como una sinfonía de paisajes vastos, ciudades vibrantes y culturas acogedoras. Desde las auroras boreales que iluminan el cielo del norte hasta las modernas metrópolis que abrazan la multiculturalidad, Canadá es una invitación a explorar sin prisa. Aquí, la naturaleza no es un escenario: es la protagonista. Lagos de agua turquesa, glaciares eternos, montañas majestuosas y bosques infinitos hacen de este país un santuario para los sentidos. Viajar a Canadá es abrir la puerta a lo salvaje y a lo humano, a lo ancestral y a lo contemporáneo. Es vivir con intensidad, respirar con amplitud y descubrir la libertad en estado puro.',
         'imagenDestacadaAsset' => 'canada.jpg'
     ],
     [
         'slugDefault' => 'Mexico',
-        'titulo' => 'Mexico',
+        'titulo' => 'México',
         'contenido' => 'México no es solo un destino, es una emoción que se vive con los cinco sentidos. Desde las pirámides del sol en Teotihuacán hasta los callejones coloniales de Guanajuato, pasando por las playas turquesas del Caribe, el país late con una mezcla vibrante de historia, arte, gastronomía y alegría contagiosa. Cada paso es un encuentro con lo ancestral y lo contemporáneo, con pueblos que aún celebran el día de los muertos como una fiesta a la vida y ciudades donde la creatividad florece en murales, mercados y música.',
         'imagenDestacadaAsset' => 'mexico.jpg'
     ],
     [
         'slugDefault' => 'Peru',
-        'titulo' => 'Peru',
+        'titulo' => 'Perú',
         'contenido' => 'Perú es un país que se vive con el alma. Desde las alturas míticas de Machu Picchu hasta el silencio profundo del Amazonas, cada rincón revela un legado milenario. Culturas vivas, paisajes que quitan el aliento y una gastronomía reconocida a nivel mundial hacen de Perú un destino para los que buscan algo más que un viaje: buscan conexión. Entre ruinas incas, mercados andinos y cañones infinitos, Perú ofrece un encuentro auténtico con el pasado, la naturaleza y la espiritualidad.',
         'imagenDestacadaAsset' => 'peru.jpg'
     ],
@@ -215,8 +215,8 @@ $destinos = [
     ],
     [
         'slugDefault' => 'PapuaNuevaGuinea',
-        'titulo' => 'Papua Nueva Guinea',
-        'contenido' => 'Papua Nueva Guinea es un destino que desafía lo convencional. Más allá de sus impresionantes paisajes tropicales, selvas densas y arrecifes de coral, este país guarda la riqueza cultural más diversa del planeta, con cientos de tribus que mantienen vivas tradiciones ancestrales únicas. Viajar a Papua Nueva Guinea es adentrarse en un mundo remoto donde la naturaleza indómita y la historia humana se funden en una experiencia de exploración auténtica y profunda. Aquí, cada encuentro es una aventura, cada ruta un descubrimiento.',
+        'titulo' => 'Papúa Nueva Guinea',
+        'contenido' => 'Papúa Nueva Guinea es un destino que desafía lo convencional. Más allá de sus impresionantes paisajes tropicales, selvas densas y arrecifes de coral, este país guarda la riqueza cultural más diversa del planeta, con cientos de tribus que mantienen vivas tradiciones ancestrales únicas. Viajar a Papúa Nueva Guinea es adentrarse en un mundo remoto donde la naturaleza indómita y la historia humana se funden en una experiencia de exploración auténtica y profunda. Aquí, cada encuentro es una aventura, cada ruta un descubrimiento.',
         'imagenDestacadaAsset' => 'papua.jpg'
     ],
     [
@@ -227,14 +227,14 @@ $destinos = [
     ],
     [
         'slugDefault' => 'Emiratos',
-        'titulo' => 'Emiratos Arabes Unidos',
+        'titulo' => 'Emiratos Árabes Unidos',
         'contenido' => 'Emiratos Árabes Unidos es un destino que sorprende y cautiva, una tierra donde el lujo futurista se mezcla con la riqueza de tradiciones milenarias. Desde las impresionantes torres de Dubái hasta las dunas doradas del desierto, este país ofrece experiencias que combinan aventura, cultura y tecnología de vanguardia. Viajar a EAU es descubrir un oasis de innovación en medio de paisajes áridos, donde cada rincón invita a explorar tanto la majestuosidad de su historia como la fascinación de su presente dinámico.',
         'imagenDestacadaAsset' => 'emiratos.jpg'
     ],
     [
         'slugDefault' => 'Israel',
         'titulo' => 'Israel',
-        'contenido' => 'Israel es un destino único que fusiona siglos de historia sagrada con una vibrante vida contemporánea. Tierra de milenarias tradiciones, paisajes que van desde el Mar Muerto hasta el Mar Mediterráneo, y ciudades que combinan cultura, espiritualidad y modernidad. Viajar a Israel es sumergirse en un mosaico cultural y espiritual, donde cada paso cuenta una historia y cada experiencia despierta los sentidos .',
+        'contenido' => 'Israel es un destino único que fusiona siglos de historia sagrada con una vibrante vida contemporánea. Tierra de milenarias tradiciones, paisajes que van desde el Mar Muerto hasta el Mar Mediterráneo, y ciudades que combinan cultura, espiritualidad y modernidad. Viajar a Israel es sumergirse en un mosaico cultural y espiritual, donde cada paso cuenta una historia y cada experiencia despierta los sentidos.',
         'imagenDestacadaAsset' => 'Israel.jpg'
     ],
     [
@@ -245,13 +245,13 @@ $destinos = [
     ],
     [
         'slugDefault' => 'Turquia',
-        'titulo' => 'Turquia',
+        'titulo' => 'Turquía',
         'contenido' => 'Turquía es un país que cautiva con su riqueza histórica, su diversidad cultural y paisajes que parecen sacados de un sueño. Desde la mística Estambul, ciudad que une dos continentes, hasta las formaciones de roca y valles de Capadocia, cada rincón invita a un viaje lleno de contrastes y descubrimientos. En Turquía, la historia milenaria convive con la vibrante modernidad, creando una experiencia única para todo tipo de viajeros.',
         'imagenDestacadaAsset' => 'turquia.jpg'
     ],
     [
         'slugDefault' => 'Oman',
-        'titulo' => 'Oman',
+        'titulo' => 'Omán',
         'contenido' => 'Omán es un país donde la autenticidad y la hospitalidad se viven en cada rincón. Sus paisajes combinan majestuosas montañas, desiertos infinitos y una costa bañada por el mar Arábigo, creando un escenario único para quienes buscan una experiencia cultural profunda y una naturaleza intacta. Omán invita a descubrir la tradición beduina, los antiguos fuertes y su esencia milenaria, lejos del turismo masivo. Un destino que despierta los sentidos y regala calma.',
         'imagenDestacadaAsset' => 'oman.jpg'
     ]
@@ -303,6 +303,51 @@ $categoriaPorSlug = [
     'Oman' => 'Cultura e Historia Milenaria, Aventura y Exploración',
 ];
 
+$continentePorSlug = [
+    'Japon' => 'Asia',
+    'China' => 'Asia',
+    'India' => 'Asia',
+    'Tailandia' => 'Asia',
+    'Vietnam' => 'Asia',
+    'Indonesia' => 'Asia',
+    'Filipinas' => 'Asia',
+    'CoreaDelSur' => 'Asia',
+    'Nepal' => 'Asia',
+    'SriLanka' => 'Asia',
+    'Emiratos' => 'Asia',
+    'Israel' => 'Asia',
+    'Jordania' => 'Asia',
+    'Turquia' => 'Asia',
+    'Oman' => 'Asia',
+    'Marruecos' => 'África',
+    'Egipto' => 'África',
+    'Sudafrica' => 'África',
+    'Tanzania' => 'África',
+    'Kenia' => 'África',
+    'Namibia' => 'África',
+    'Etiopia' => 'África',
+    'Senegal' => 'África',
+    'Ghana' => 'África',
+    'Madagascar' => 'África',
+    'EstadosUnidos' => 'América del Norte',
+    'Canada' => 'América del Norte',
+    'Mexico' => 'América del Norte',
+    'CostaRica' => 'América Central',
+    'Guatemala' => 'América Central',
+    'Peru' => 'América del Sur',
+    'Brasil' => 'América del Sur',
+    'Argentina' => 'América del Sur',
+    'Ecuador' => 'América del Sur',
+    'Chile' => 'América del Sur',
+    'Colombia' => 'América del Sur',
+    'Australia' => 'Oceanía',
+    'NuevaZelanda' => 'Oceanía',
+    'Fiji' => 'Oceanía',
+    'PolinesiaFrancesa' => 'Oceanía',
+    'PapuaNuevaGuinea' => 'Oceanía',
+    'Samoa' => 'Oceanía',
+];
+
 $GLOBALS['glory_imagen_por_categoria'] = [
     'Cultura e Historia Milenaria' => 'cultura.jpg',
     'Lunas de Miel y Escapadas Románticas' => 'romantico.jpg',
@@ -329,6 +374,12 @@ foreach ($destinos as &$d) {
             $d['metaEntrada'] = [];
         }
         $d['metaEntrada']['categoria'] = $categoriaPorSlug[$d['slugDefault']];
+    }
+    if (isset($continentePorSlug[$d['slugDefault']])) {
+        if (!isset($d['metaEntrada']) || !is_array($d['metaEntrada'])) {
+            $d['metaEntrada'] = [];
+        }
+        $d['metaEntrada']['continente'] = $continentePorSlug[$d['slugDefault']];
     }
 }
 unset($d);

@@ -32,12 +32,16 @@ function pageCategoria()
 
     <?php
     $cat_id = get_queried_object_id();
+
     ContentRender::print('destino', [
-        'publicacionesPorPagina' => 50,
+        'publicacionesPorPagina' => -1,
         'plantillaCallback'      => 'destinoGaleria',
-        'orden'                  => 'fecha',
-        'itemClass'              => 'destinoGaleria',
-        'claseContenedor'        => 'destinoGaleriaContenedor',
+        'metaKey'               => 'continente',
+        'orden'                 => 'ASC',
+        'grupoEncabezado'          => true,
+        'grupoOrdenCantidad'      => true,
+        'claseContenedor'       => 'destinoGaleriaContenedor',
+        'claseItem'             => 'destinoGaleria',
         'argumentosConsulta'     => [
             'tax_query' => [
                 [
@@ -48,6 +52,7 @@ function pageCategoria()
             ],
         ],
     ]);
+
     ?>
 
 

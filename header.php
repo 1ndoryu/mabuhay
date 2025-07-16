@@ -21,14 +21,18 @@ $usuarioId = get_current_user_id();
 <body>
     <header class="header">
 
-        <nav class="flex gap20 pa25">
-            <a href="<? echo home_url('/'); ?>">Test</a>
-            <a href="<? echo home_url('/'); ?>">Test</a>
+        <nav class="flex gap20 pa20" class="headerNav">
+            <div class="flex gap20">
+                <a href="<? echo home_url('/'); ?>">Inicio</a>
+                <a href="<? echo home_url('/destino'); ?>">Destinos</a>
+                <a href="<? echo home_url('/experiencias'); ?>">Experiencias</a>
+                <a href="<? echo home_url('/nosotros'); ?>">Nosotros</a>
+                
+            </div>
             <a href="<? echo home_url('/'); ?>" class="logoSitio">
                 <?php echo $GLOBALS['logoViaje']; ?>
             </a>
-            <a href="<? echo home_url('/'); ?>">Test</a>
-            <a href="<? echo home_url('/'); ?>">Test</a>
+            <a href="<? echo home_url('/contacto'); ?>" style="margin-left: auto;" class="botonHeader">Planificar mi viaje</a>
         </nav>
     </header>
 

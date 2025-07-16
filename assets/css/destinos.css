@@ -1,7 +1,3 @@
-.destinoGaleriaContenedor.destino div {
-    width: 300px;
-}
-
 .destinoGaleriaContenedor.destino img {
     height: 300px;
     object-fit: cover;
@@ -12,12 +8,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    padding: 30px;
+    flex-direction: column;
+    width: 100%;
 }
-
 
 .destinoGaleriaContenedor.destino .imagen {
     position: relative;
@@ -35,4 +29,15 @@
     line-height: 29px;
 }
 
+.destino .gloryGrupo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
 
+h3.grupoHead {
+    font-size: 22px !important;
+    font-family: var(--font-serif);
+    line-height: unset;
+    FONT-WEIGHT: 500;
+}
