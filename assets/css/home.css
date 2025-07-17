@@ -29,14 +29,14 @@ a.logoSitio {
     width: 100%;
 }
 
-.header div, .header nav  {
+.header div,
+.header nav {
     width: 100%;
 }
 
 .botonHeader {
     white-space: nowrap;
 }
-
 
 .hero {
     width: 100vw;
@@ -266,4 +266,53 @@ header.header.fijado .logoSitio svg {
 .footerContact svg {
     height: 24px;
     width: 24px;
+}
+
+.container.experiencias {
+    max-width: 100%;
+}
+
+.glory-content-list.experiencia {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.experiencia-item img {
+    height: 280px;
+    width: 280px;
+}
+
+.experiencia-item img {
+    height: 280px !important;
+    width: 280px;
+    min-width: 280px;
+}
+
+.experiencia-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experiencia-item .titulo {
+    font-weight: 600;
+    font-family: var(--font-serif);
+}
+
+.grid-galeria::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+}
+
+.section.experiencias {
+    min-height: unset;
+}
+
+.container.experiencias {
+    max-width: 100%;
+    text-align: start;
+    padding: 40px;
 }

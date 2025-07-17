@@ -11,6 +11,7 @@ AssetManager::defineFolder('style', '/assets/css/');
 PageManager::define('home');
 PageManager::define('destino');
 PageManager::define('nosotros');
+PageManager::define('experiencia');
 
 # CreditosManager::init();
 # CreditosManager::recargaPeriodica(true, 10, 1);

@@ -15,5 +15,18 @@ PostTypeManager::define(
     'Destinos'
 );
 
+PostTypeManager::define(
+    'experiencia',
+    [
+        'has_archive' => true,
+        'rewrite'     => ['slug' => 'experiencias'],
+        'menu_icon'   => 'dashicons-star-filled',
+        'supports'    => ['title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'],
+        'taxonomies'  => ['category'],
+    ],
+    'Experiencia',
+    'Experiencias'
+);
+
 // Registra todos los CPTs definidos anteriormente.
 PostTypeManager::register();

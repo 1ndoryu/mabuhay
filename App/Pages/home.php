@@ -75,6 +75,24 @@ function home()
             ]); ?>
         </div>
     </div>
-<?php
+
+    <div class="section experiencias" style="background-color: var(--blanco);">
+        <div class="container experiencias">
+            <h2>Experiencias</h2>
+            <div class="galeria-wrapper">
+                <button class="galeria-prev" aria-label="Anterior">&#10094;</button>
+                <div class="grid-galeria">
+                    <?php ContentRender::print('experiencia', [
+                        'publicacionesPorPagina' => 6,
+                        'plantillaCallback'      => 'experienciaGaleria',
+                        'orden'                  => 'random'
+                    ]); ?>
+                </div>
+                <button class="galeria-next" aria-label="Siguiente">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <?php
     return ob_get_clean();
 }

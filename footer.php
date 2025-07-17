@@ -16,7 +16,7 @@
             <nav class="footerNav flex column" aria-label="Menú de navegación del sitio">
                 <a href="<?php echo home_url('/'); ?>">Inicio</a>
                 <a href="<?php echo home_url('/destino'); ?>">Destinos</a>
-                <a href="<?php echo home_url('/experiencias'); ?>">Experiencias</a>
+                <a href="<?php echo home_url('/experiencia'); ?>">Experiencias</a>
                 <a href="<?php echo home_url('/nosotros'); ?>">Nosotros</a>
             </nav>
 

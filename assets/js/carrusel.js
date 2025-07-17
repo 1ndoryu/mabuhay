@@ -41,4 +41,4 @@ function carrusel() {
     lista.dataset.circular = 'true';
 };
 
-document.addEventListener('gloryRecarga', carrusel);
+// document.addEventListener('gloryRecarga', carrusel);

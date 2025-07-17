@@ -25,7 +25,7 @@ $usuarioId = get_current_user_id();
             <div class="flex gap20">
                 <a href="<? echo home_url('/'); ?>">Inicio</a>
                 <a href="<? echo home_url('/destino'); ?>">Destinos</a>
-                <a href="<? echo home_url('/experiencias'); ?>">Experiencias</a>
+                <a href="<? echo home_url('/experiencia'); ?>">Experiencias</a>
                 <a href="<? echo home_url('/nosotros'); ?>">Nosotros</a>
                 
             </div>
