@@ -1,4 +1,4 @@
-// Script de galería para singleDestino
+// Script de galería para singlePage
 function galeria() {
         const grid = document.querySelector('.grid-galeria');
         if (!grid) return;

@@ -9,7 +9,7 @@ function pageSingleDestino(\WP_Post $post)
 
     </div>
 
-    <div class="container singleDestino" style="background-color: var(--tercero);">
+    <div class="container singlePage" style="background-color: var(--tercero);">
         <h2><?php echo get_the_title($post); ?></h2>
         <p><?php echo get_the_content($post); ?></p>
         <button class="borde principal">
@@ -19,7 +19,7 @@ function pageSingleDestino(\WP_Post $post)
         </button>
     </div>
 
-    <div class="container singleDestino galeria" style="background-color: var(--segundo);">
+    <div class="container singlePage galeria" style="background-color: var(--segundo);">
         <h2>Galeria</h2>
         <div class="galeria-wrapper">
             <button class="galeria-prev" aria-label="Anterior">&#10094;</button>
