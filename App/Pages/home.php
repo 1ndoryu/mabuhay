@@ -23,11 +23,11 @@ function home()
             <h3>
                 En Mabuhay, somos artesanos de experiencias. Diseñamos viajes que no solo cambian su perspectiva, sino que también dejan un legado positivo en las culturas, las comunidades y el patrimonio que visitamos. Creamos un espacio de serenidad y confort para que reconecte con usted mismo y con sus seres querido
             </h3>
-            <button class="borde principal">
-                <a href="/destino">
+            <a href="/destino">
+                <button class="borde principal">
                     Ver todos los destinos
-                </a>
-            </button>
+                </button>
+            </a>
         </div>
         <div class="container destinos" style="margin-bottom: 40px;">
             <?php ContentRender::print('destino', [
@@ -52,11 +52,11 @@ function home()
                 Descubra el mundo con una nueva mirada. Atrévase a vivir experiencias que transforman, conectan y dejan huella. <br>
             </h2>
             <h3 style="color: var(--blanco);">Su próxima aventura comienza aquí. ¿Está listo para sentir, explorar y crear recuerdos inolvidables?</h3>
-            <button class="borde principal" style="border-color: var(--blanco); color: var(--blanco);">
-                <a href="/destinos">
+            <a href="/contacto">
+                <button class="borde principal" style="border-color: var(--blanco); color: var(--blanco);">
                     Planificar mi viaje
-                </a>
-            </button>
+                </button>
+            </a>
         </div>
     </div>
 

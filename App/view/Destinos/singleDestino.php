@@ -1,5 +1,6 @@
 <?php
 
+use Glory\Components\ContentRender;
 
 function pageSingleDestino(\WP_Post $post)
 {
@@ -45,10 +46,24 @@ function pageSingleDestino(\WP_Post $post)
         <img src="" alt="Imagen ampliada" />
     </div>
 
+    <div class="container singlePage">
+        <h2>Otros destinos</h2>
+        <div class="galeria-wrapper">
+            <button class="galeria-prev" aria-label="Anterior">&#10094;</button>
+            <div class="otros-destinos">
+                <?php ContentRender::print('destino', [
+                    'publicacionesPorPagina' => 8,
+                    'plantillaCallback'      => 'destinoGaleria',
+                    'orden'                  => 'random',
+                    'claseContenedor'       => 'otrosDestinos',
+                    'claseItem'             => 'otrosDestinosItem'
+                ]); ?>
+            </div>
+            <button class="galeria-next" aria-label="Siguiente">&#10095;</button>
+        </div>
+    </div>
 
-
-
-<?php
+    <?php
     return ob_get_clean();
 }
-?>
+    ?>

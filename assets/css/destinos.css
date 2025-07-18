@@ -39,5 +39,35 @@ h3.grupoHead {
     font-size: 22px !important;
     font-family: var(--font-serif);
     line-height: unset;
-    FONT-WEIGHT: 500;
+    font-weight: 500;
+}
+
+.otrosDestinos img {
+    max-height: 250px;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.otrosDestinos.destino {
+    display: flex;
+    gap: 20px;
+}
+
+.otrosDestinos .titulo {
+    position: unset;
+    color: unset !important;
+    text-align: start;
+    font-size: 14px;
+    text-align-last: unset !important;
+    padding-top: 10px;
+}
+
+.otros-destinos {
+    overflow: auto;
+}
+
+.otros-destinos::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
 }
