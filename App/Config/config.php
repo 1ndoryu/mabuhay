@@ -12,6 +12,7 @@ PageManager::define('home');
 PageManager::define('destino');
 PageManager::define('nosotros');
 PageManager::define('experiencia');
+PageManager::define('contacto');
 
 # CreditosManager::init();
 # CreditosManager::recargaPeriodica(true, 10, 1);

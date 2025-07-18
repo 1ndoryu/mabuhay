@@ -389,11 +389,11 @@ form {
 
 input,
 textarea {
-    background: unset !important;
-    padding: 7px 0px !important;
+    background: unset;
+    padding: 7px 0px;
     border-bottom: var(--borde) !important;
-    font-size: 12px !important;
-    color: #d4d4d4 !important;
+    font-size: 12px;
+    color: #d4d4d4;
     border-radius: 0px;
     border: none;
     resize: none;
@@ -470,4 +470,30 @@ textarea:focus {
     display: flex; /* o flex, grid, etc., según necesites */
 }
 
-/* Evita el scroll en el body cuando un menú está abierto */
+select {
+    border: unset;
+    background: unset;
+    font-family: 'Source Sans 3';
+    padding: 5px;
+    padding-left: 0px;
+    margin: unset;
+    font-size: 14px;
+    border-bottom: var(--borde);
+    outline: none; /* Esto elimina el borde negro al hacer clic */
+}
+
+/* Estilos de la notificación individual (sin posicionamiento) */
+.custom-notification {
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--tercero) !important;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 12px;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: notification-slide-in 0.3s ease-out forwards;
+    color: #000 !important;
+}

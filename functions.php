@@ -1,5 +1,7 @@
 <?php
 
+use Glory\Handler\FormHandler;
+
 $directorioTemaActivo = get_stylesheet_directory();
 
 $autoloader = get_template_directory() . '/vendor/autoload.php';
@@ -8,6 +10,8 @@ if (file_exists($autoloader)) {
 } else {
     error_log('Error: Composer autoload no encontrado. Ejecuta "composer install".');
 }
+
+FormHandler::registerHandlerNamespace('App\\Handlers\\Form\\');
 
 $glory_loader = get_template_directory() . '/Glory/load.php';
 if (file_exists($glory_loader)) {
@@ -66,10 +70,12 @@ add_action('pre_get_posts', function ($query) {
     }
 });
 
-// --- Sincronización de contenido por defecto también en frontend ---
+// --- Sincronización de contenido por defecto (sólo admin/cron/CLI) ---
 add_action('init', function () {
-    if (is_admin()) {
-        return; // El sincronizador ya corre en admin
+    // Ejecutar SÓLO cuando estemos en el área de administración, en una tarea cron
+    // o en la línea de comandos. Así evitamos bloqueos en el front-end.
+    if (!is_admin() && !wp_doing_cron() && !(defined('WP_CLI') && WP_CLI)) {
+        return;
     }
 
     $needsSync = false;
@@ -158,3 +164,49 @@ add_action('admin_notices', function () {
         echo '<div class="notice notice-success is-dismissible"><p><strong>Sincronización de Glory completada con éxito.</strong></p></div>';
     }
 });
+
+// -------------------------------------------------------------------------
+//  GLORY PROFILER LIGERO (para depurar tiempos de carga)  
+//  Registra en debug.log cada etapa y cuánto tarda.  
+// -------------------------------------------------------------------------
+if ( ! defined('GLORY_PROFILER') ) {
+    define('GLORY_PROFILER', true);
+
+    $GLOBALS['glory_t0']    = microtime(true);
+    $GLOBALS['glory_marks'] = [];
+
+    function glory_mark( string $etapa ) : void {
+        if ( ! defined('GLORY_PROFILER') ) {
+            return;
+        }
+        $now                              = microtime(true);
+        $GLOBALS['glory_marks'][]         = [ $etapa, $now - $GLOBALS['glory_t0'] ];
+        $GLOBALS['glory_t0']              = $now; // reiniciamos referencia
+    }
+
+    // Marcas clave del ciclo de WordPress
+    glory_mark('php-inicio');
+    add_action( 'init',               function(){ glory_mark('init'); },               -999 );
+    add_action( 'template_redirect',  function(){ glory_mark('template_redirect'); } );
+    add_action( 'wp_head',            function(){ glory_mark('wp_head'); },            999 );
+    add_action( 'wp_footer',          function(){ glory_mark('wp_footer'); },          -999 );
+
+    // Al final de la petición: volcamos todas las marcas en el log
+    add_action( 'shutdown', function() {
+        if ( ! defined('GLORY_PROFILER') ) {
+            return;
+        }
+        foreach ( $GLOBALS['glory_marks'] as $punto ) {
+            list( $etapa, $delta ) = $punto;
+            error_log( sprintf( '[PROFILE] %-25s +%.3f s', $etapa, $delta ) );
+        }
+    });
+}
+
+// -- Traza de peticiones HTTP externas ---------------------------------
+add_filter( 'pre_http_request', function( $pre, $args, $url ) {
+    if ( function_exists('glory_mark') ) {
+        glory_mark( 'HTTP→ '.parse_url( $url, PHP_URL_HOST ) );
+    }
+    return $pre; // continuar con la petición normalmente
+}, 10, 3 );
