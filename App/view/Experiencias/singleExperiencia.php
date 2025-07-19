@@ -9,7 +9,7 @@ function pageSingleExperiencia(\WP_Post $post)
     </div>
 
     <div class="container singlePage" style="background-color: var(--tercero);">
-        <h2><?php echo get_the_title($post); ?></h2>
+        <h1 class="entry-title"><?php echo get_the_title($post); ?></h1>
         <p><?php echo get_the_content($post); ?></p>
         <button class="borde principal">
             <a href="/contacto">
@@ -29,7 +29,11 @@ function pageSingleExperiencia(\WP_Post $post)
                     foreach ($idsGaleria as $idAdjunto) {
                         $urlImg = wp_get_attachment_image_url($idAdjunto, 'large');
                         if ($urlImg) {
-                            echo '<img src="' . esc_url($urlImg) . '" alt="Galería" class="item-galeria">';
+                            $alt_text = get_post_meta($idAdjunto, '_wp_attachment_image_alt', true);
+                            if (empty($alt_text)) {
+                                $alt_text = 'Galería de ' . get_the_title($post);
+                            }
+                            echo '<img src="' . esc_url($urlImg) . '" alt="' . esc_attr($alt_text) . '" class="item-galeria">';
                         }
                     }
                 }

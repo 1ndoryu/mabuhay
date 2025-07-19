@@ -213,3 +213,13 @@ add_filter( 'pre_http_request', function( $pre, $args, $url ) {
 }, 10, 3 );
 */
 
+// Inicializar el gestor de SEO
+if (class_exists('App\\SEO\\SeoManager')) {
+    App\SEO\SeoManager::init();
+}
+
+// Inicializar el generador de Sitemap
+if (class_exists('App\\SEO\\SitemapGenerator')) {
+    App\SEO\SitemapGenerator::init();
+}
+
