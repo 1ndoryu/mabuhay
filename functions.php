@@ -169,6 +169,7 @@ add_action('admin_notices', function () {
 //  GLORY PROFILER LIGERO (para depurar tiempos de carga)  
 //  Registra en debug.log cada etapa y cuánto tarda.  
 // -------------------------------------------------------------------------
+/*
 if ( ! defined('GLORY_PROFILER') ) {
     define('GLORY_PROFILER', true);
 
@@ -210,3 +211,5 @@ add_filter( 'pre_http_request', function( $pre, $args, $url ) {
     }
     return $pre; // continuar con la petición normalmente
 }, 10, 3 );
+*/
+

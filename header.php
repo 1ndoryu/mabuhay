@@ -13,6 +13,7 @@ $usuarioId = get_current_user_id();
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/images/icon.png">
     <?php wp_head(); ?>
 </head>
 
