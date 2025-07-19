@@ -4,7 +4,7 @@ use Glory\Core\AssetManager;
 use Glory\Core\PageManager;
 
 AssetManager::setGlobalDevMode(true);
-AssetManager::setThemeVersion('0.1.1');
+AssetManager::setThemeVersion('0.1.2');
 AssetManager::defineFolder('script', '/assets/js/');
 AssetManager::defineFolder('style', '/assets/css/');
 
