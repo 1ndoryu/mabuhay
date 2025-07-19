@@ -254,6 +254,7 @@ header.header.fijado {
     width: 100%;
     background: var(--tercero);
     z-index: 1001; /* Por encima del resto de elementos */
+    min-height: 60px;
 }
 
 /* Colores del menú al estar fijado */
