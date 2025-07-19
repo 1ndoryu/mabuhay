@@ -335,9 +335,8 @@ header.header.oscuro .logoSitio svg {
     fill: var(--blanco);
 }
 
-/* ===== Menú hamburguesa (versión móvil) ===== */
 .menuToggle {
-    display: none; /* Oculto por defecto, se mostrará en móviles */
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 4px;
@@ -345,8 +344,12 @@ header.header.oscuro .logoSitio svg {
     height: 24px;
     background: none;
     border: none;
+    padding: 0px;
     cursor: pointer;
-    z-index: 1002; /* Por encima del overlay de enlaces */
+    z-index: 1002;
+    position: absolute;
+    top: 21px;
+    left: 21px;
 }
 
 .menuToggle .line {
