@@ -111,12 +111,19 @@ function menuHamburguesa() {
         alternar();
     });
 
+    // Soporte táctil directo para asegurar apertura en dispositivos sin evento 'click' estándar
+    toggle.addEventListener('touchstart', (e) => {
+        e.stopPropagation();
+        alternar();
+    });
+
     // Cerrar al hacer click/tap fuera del menú
     document.addEventListener('click', (e) => {
         if (!nav.contains(e.target) && !toggle.contains(e.target)) {
             cerrar();
         }
     });
+
     document.addEventListener('touchstart', (e) => {
         if (!nav.contains(e.target) && !toggle.contains(e.target)) {
             cerrar();

@@ -330,8 +330,24 @@ header.header.claro .logoSitio svg {
     fill: var(--negro);
 }
 
+header.header.claro .menuToggle,
+header.header.claro .menuToggle svg,
+header.header.claro .icon-menu,
+header.header.claro .icon-close {
+    color: var(--negro);
+    fill: var(--negro);
+}
+
 header.header.oscuro a,
 header.header.oscuro .logoSitio svg {
+    color: var(--blanco);
+    fill: var(--blanco);
+}
+
+header.header.oscuro .menuToggle,
+header.header.oscuro .menuToggle svg,
+header.header.oscuro .icon-menu,
+header.header.oscuro .icon-close {
     color: var(--blanco);
     fill: var(--blanco);
 }

@@ -497,3 +497,20 @@ select {
     animation: notification-slide-in 0.3s ease-out forwards;
     color: #000 !important;
 }
+
+/* ===== Colores dinámicos para iconos del botón de menú ===== */
+header.header.claro .menuToggle,
+header.header.claro .menuToggle svg,
+header.header.claro .icon-menu,
+header.header.claro .icon-close {
+    color: var(--negro);
+    fill: var(--negro);
+}
+
+header.header.oscuro .menuToggle,
+header.header.oscuro .menuToggle svg,
+header.header.oscuro .icon-menu,
+header.header.oscuro .icon-close {
+    color: var(--blanco);
+    fill: var(--blanco);
+}
