@@ -22,7 +22,11 @@ $usuarioId = get_current_user_id();
 <body>
     <header class="header">
 
-        <nav class="flex gap20 pa20" class="headerNav">
+        <nav class="headerNav flex gap20 pa20">
+            <button class="menuToggle" aria-label="Menú" aria-expanded="false">
+                <span class="icon-menu"><?php echo $GLOBALS['hamburguesa']; ?></span>
+                <span class="icon-close" style="display:none;"><?php echo $GLOBALS['equis']; ?></span>
+            </button>
             <div class="flex gap20">
                 <a href="<? echo home_url('/'); ?>">Inicio</a>
                 <a href="<? echo home_url('/destino'); ?>">Destinos</a>

@@ -127,7 +127,16 @@ svg#uuid-0fed6675-7d19-4294-ae6f-2dffd2e706a2 {
 }
 
 .container.destinos {
-    max-width: unset;
+    max-width: 100%;
+    overflow: auto;
+}
+
+video.hero-video {
+    max-width: 100%;
+}
+
+footer {
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -324,4 +333,124 @@ header.header.oscuro a,
 header.header.oscuro .logoSitio svg {
     color: var(--blanco);
     fill: var(--blanco);
+}
+
+/* ===== Menú hamburguesa (versión móvil) ===== */
+.menuToggle {
+    display: none; /* Oculto por defecto, se mostrará en móviles */
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 28px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1002; /* Por encima del overlay de enlaces */
+}
+
+.menuToggle .line {
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.headerNav.abierto .menuToggle .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.headerNav.abierto .menuToggle .line:nth-child(2) {
+    opacity: 0;
+}
+.headerNav.abierto .menuToggle .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.menuToggle svg {
+    height: 24px;
+    width: 24px;
+    pointer-events: none;
+}
+
+.menuToggle .icon-close { display: none; }
+.headerNav.abierto .icon-menu { display: none; }
+.headerNav.abierto .icon-close { display: inline-block; }
+
+/* ===== Media Queries usando Range Syntax ===== */
+
+/* Vista escritorio y tablet grande */
+@media (width >= 768px) {
+    .menuToggle {
+        display: none;
+    }
+    .headerNav .flex,
+    .headerNav .botonHeader {
+        display: flex;
+    }
+    .headerNav .flex {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+/* Vista móvil (< 768px) */
+@media (width < 768px) {
+    .menuToggle {
+        display: flex;
+        color: var(--blanco);
+    }
+
+    .abierto a {
+        color: unset !important;
+        font-size: 16px;
+        fill: unset !important;
+    }
+
+    /* Ocultamos enlaces y botón por defecto */
+    .headerNav .flex,
+    .headerNav .botonHeader {
+        display: none;
+    }
+
+    /* Cuando el menú está abierto */
+    .headerNav.abierto {
+        position: fixed;
+        inset: 0;
+        background: var(--tercero);
+        flex-direction: column;
+        padding-top: 60px;
+        gap: 40px;
+        align-items: center;
+        overflow-y: auto;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .logoSitio svg {
+        height: 18px;
+    }
+
+    .abierto .logoSitio svg {
+        color: var(--negro) !important; 
+        fill: var(--negro) !important; 
+        height: 18px;
+    }
+
+    .headerNav.abierto .flex,
+    .headerNav.abierto .botonHeader {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .headerNav.abierto .botonHeader {
+        margin-left: 0;
+    }
+}
+
+/* Rango intermedio: móvil ancho (640-767px) */
+@media (640px <= width < 768px) {
+    .headerNav.abierto {
+        padding-top: 80px;
+    }
 }

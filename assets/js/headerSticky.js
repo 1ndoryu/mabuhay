@@ -85,4 +85,54 @@ function headerSticky() {
 }
 
 document.addEventListener('DOMContentLoaded', headerSticky);
-document.addEventListener('gloryRecarga', headerSticky); 
+document.addEventListener('gloryRecarga', headerSticky);
+
+/* ===== Menú hamburguesa ===== */
+function menuHamburguesa() {
+    const nav = document.querySelector('.headerNav');
+    const toggle = document.querySelector('.menuToggle');
+    if (!nav || !toggle) return;
+
+    const alternar = () => {
+        nav.classList.toggle('abierto');
+        const abierto = nav.classList.contains('abierto');
+        toggle.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+    };
+
+    const cerrar = () => {
+        if (nav.classList.contains('abierto')) {
+            nav.classList.remove('abierto');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+    };
+
+    toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        alternar();
+    });
+
+    // Cerrar al hacer click/tap fuera del menú
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+            cerrar();
+        }
+    });
+    document.addEventListener('touchstart', (e) => {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+            cerrar();
+        }
+    });
+
+    // Cerrar al hacer click en cualquier parte del menú (por ejemplo fondo o enlaces)
+    nav.addEventListener('click', (e) => {
+        if (nav.classList.contains('abierto') && e.target !== toggle) {
+            cerrar();
+        }
+    });
+}
+
+// Inicializamos inmediatamente en caso de que el script se cargue tras DOMContentLoaded
+menuHamburguesa();
+
+document.addEventListener('DOMContentLoaded', menuHamburguesa);
+document.addEventListener('gloryRecarga', menuHamburguesa); 
