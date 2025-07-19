@@ -7,8 +7,11 @@ function pageExperiencias()
 {
     ob_start();
 ?>
-    <div class="hero secundario" style="background-image: url(<?php AssetsUtility::imagenUrl('inicio', 'jpg'); ?>);">
+    <div class="heroTercero">
         <h2>Experiencias</h2>
+        <h3>
+            Descubre una selección de experiencias únicas y memorables, inspiradas en los destinos exclusivos que ofrece nuestra agencia de viajes. Cada experiencia está diseñada para sorprenderte, emocionarte y acercarte a la esencia de cada lugar, permitiéndote vivir momentos inolvidables alrededor del mundo.
+        </h3>
     </div>
     <?php
     ContentRender::print('experiencia', [

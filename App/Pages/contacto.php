@@ -27,11 +27,14 @@ function pageContacto()
 
     ob_start();
 ?>
-    <div class="hero secundario" style="background-image: url(<?php AssetsUtility::imagenUrl('inicio', 'jpg'); ?>);">
+    <div class="heroTercero">
+        <h2>Planifica tu viaje</h2>
+        <h3>
+            Planifica tu viaje soñado con nosotros. Cuéntanos tus preferencias, intereses y expectativas, y nuestro equipo diseñará una experiencia a medida para ti. Rellena el siguiente formulario y nos pondremos en contacto contigo para hacer realidad tu próxima aventura.
+        </h3>
     </div>
-    <div class="section contacto" style="background-color: #f9f9f9;">
+    <div class="section contacto">
         <div class="contactoForm">
-            <h2>Planifica tu Viaje</h2>
             <?php
             echo FormBuilder::inicio(['atributos' => ['id' => 'form-contacto']]);
             ?>

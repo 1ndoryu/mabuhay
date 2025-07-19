@@ -1,7 +1,6 @@
 .contactoForm {
     width: 100%;
-    padding: 40px;
-    max-width: 1250px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -49,9 +48,9 @@ h3.form-section-title {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 15px;
-    background-color: #ebe2d34f;
+    padding: 20px;
     border-radius: var(--radius);
+    background-color: #ebe2d361;
 }
 
 .checkbox-group {
