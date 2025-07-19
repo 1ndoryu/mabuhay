@@ -307,12 +307,21 @@ header.header.fijado .logoSitio svg {
     width: 0px;
 }
 
-.section.experiencias {
-    min-height: unset;
-}
-
 .container.experiencias {
     max-width: 100%;
     text-align: start;
     padding: 40px;
+}
+
+/* ===== Modo inteligente de color para el header ===== */
+header.header.claro a,
+header.header.claro .logoSitio svg {
+    color: var(--negro);
+    fill: var(--negro);
+}
+
+header.header.oscuro a,
+header.header.oscuro .logoSitio svg {
+    color: var(--blanco);
+    fill: var(--blanco);
 }

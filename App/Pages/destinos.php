@@ -7,8 +7,11 @@ function pageDestinos()
 {
     ob_start();
 ?>
-    <div class="hero secundario" style="background-image: url(<?php AssetsUtility::imagenUrl('inicio', 'jpg'); ?>);">
+    <div class="heroTercero">
         <h2>Destinos</h2>
+        <h3>
+            Descubre nuestros destinos exclusivos alrededor del mundo. Cada lugar ha sido seleccionado para ofrecerte experiencias auténticas, confort inigualable y la oportunidad de conectar con culturas fascinantes. Explora, sueña y déjate inspirar por la diversidad de paisajes y aventuras que te esperan.
+        </h3>
     </div>
 
     <?php

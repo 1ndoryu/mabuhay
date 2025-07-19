@@ -71,3 +71,16 @@ h3.grupoHead {
     height: 0px;
     width: 0px;
 }
+
+.heroTercero {
+    padding: 30px;
+    padding-top: 80px;
+    padding-bottom: 0px;
+    max-width: 800px;
+}
+
+.heroTercero h2 {
+    font-family: var(--font-serif);
+    FONT-WEIGHT: 500;
+    font-size: 34px;
+}
