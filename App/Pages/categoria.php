@@ -10,7 +10,13 @@ function pageCategoria()
     <div class="heroTercero">
         <h2><?php single_cat_title(); ?></h2>
         <h3>
-
+            <?php
+            // Obtener el objeto de la categoría actual y mostrar su descripción, si existe
+            $categoriaActual = get_queried_object();
+            if ($categoriaActual instanceof WP_Term && !empty($categoriaActual->description)) {
+                echo esc_html($categoriaActual->description);
+            }
+            ?>
         </h3>
     </div>
 
